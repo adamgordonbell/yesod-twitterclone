@@ -1,0 +1,20 @@
+Default: &defaults
+  database: twitter.sqlite3
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: twitter_test.sqlite3
+  <<: *defaults
+
+Staging:
+  database: twitter_staging.sqlite3
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: twitter_production.sqlite3
+  poolsize: 100
+  <<: *defaults
